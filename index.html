@@ -162,9 +162,15 @@
     <section id="order" class="container" style="margin-bottom: 80px; text-align: center;">
         <h2 style="font-size: 36px; margin-bottom: 20px;">Запустите бесплатный тест в вашей организации</h2>
         <p style="max-width: 600px; margin: 0 auto 40px; color: var(--text-muted);">Мы бесплатно установим тестовый комплект из 3-х устройств AutoVent в вашей организации на 14 дней для проверки эффективности.</p>
-        <form style="max-width: 500px; margin: 0 auto; display: grid; gap: 15px;" onsubmit="event.preventDefault(); alert('Заявка успешно отправлена!');">
-            <input type="text" placeholder="Ваше имя / Название ЛПР" style="padding: 15px; border: 1px solid var(--border); border-radius: 6px; font-size: 16px;" required>
-            <input type="email" placeholder="Контактный Email" style="padding: 15px; border: 1px solid var(--border); border-radius: 6px; font-size: 16px;" required>
+        
+        <form action="https://api.web3forms.com/submit" method="POST" style="max-width: 500px; margin: 0 auto; display: grid; gap: 15px;">
+            
+            <input type="hidden" name="access_key" value="dbadcbb1-c0ef-46ba-bf79-a302c4b5931f">
+            <input type="hidden" name="from_name" value="AutoVent Лендинг">
+
+            <input type="text" name="Имя_или_Организация" placeholder="Ваше имя / Название ЛПР" style="padding: 15px; border: 1px solid var(--border); border-radius: 6px; font-size: 16px; color: #0f172a; background-color: #fff;" required>
+            <input type="email" name="Email_для_связи" placeholder="Контактный Email" style="padding: 15px; border: 1px solid var(--border); border-radius: 6px; font-size: 16px; color: #0f172a; background-color: #fff;" required>
+            
             <button type="submit" class="btn">Подать заявку на пилот</button>
         </form>
     </section>
